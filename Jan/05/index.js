@@ -105,7 +105,7 @@ speedCheck > 50
   let numx = num1 % 2;
 
   //console.log(numx);
-  //console.log(num1 == 0 ? ´${num1} is even´ : ´${numx} is odd ´);
+  //console.log(num1 == 0 ? ´${num1} is even´ : ´${numx} is odd´);
 
   function oddOrEven(num) { 
     return num % 2 == 0 ? "even" : "odd";
@@ -118,6 +118,66 @@ let variable = 123;
 let variable2 = 130.7;
 
 
+
+// Homework 05.01.21
+
+// 1)
+
+console.log(Math.max(-1, 4));
+
+console.log(Math.min(-1, 4));
+
+// 2)
+
+// float
+
+var float = 3321.32321;
+let fixedFloatNum = Math.floor(float);
+console.log(fixedFloatNum);
+
+// (shorter way)
+function floatNumFlour(num) {
+  return Math.floor(num) ;
+}
+console.log(floatNumFlour(3321.32321));
+console.log(floatNumFlour(326.76));
+console.log(floatNumFlour(76788.7));
+console.log(floatNumFlour(-9.78));
+console.log(floatNumFlour(43.342));
+
+// ceil
+
+var float2 = 3321.32321;
+let fixedFloatNumCeil = Math.ceil(float2);
+console.log(fixedFloatNumCeil);
+
+// (shorter way)
+function floatNumFlourCeil(num) {
+  return Math.ceil(num) ;
+}
+console.log(floatNumFlourCeil(3321.32321));
+console.log(floatNumFlourCeil(326.76));
+console.log(floatNumFlourCeil(76788.7));
+console.log(floatNumFlourCeil(-9.78));
+console.log(floatNumFlourCeil(43.342));
+
+// 3)
+
+let introSentence = "Hi, my name is Nancy and I am";
+let ageReal = 25;
+let combinedStr = introSentence + " " + ageReal;
+console.log(combinedStr);
+
+//  the + operator concatenates the variables to one string
+
+// 4)
+
+let strToInt = "1005";
+console.log(parseInt(strToInt));
+
+
+let strToFloat = "10.05";
+console.log(parseFloat(strToFloat));
 
 
 
