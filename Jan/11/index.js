@@ -71,7 +71,7 @@ for (let i = 9; i => 9; i--)
 
 console.log(text); */
 
-text = "";
+/*text = "";
 for (let i = 1; i <= 4; i++) {
   for (let j = 0; j < 3; j++) {
     text += i + " ";
@@ -92,7 +92,7 @@ for (let i = 1; i <= 4; i++) {
     
   }
 
-
+  0 1 2 3 4
   let countNum = 0;
 text = "";
 for (let i = 1; i <= 4; ) {
@@ -109,7 +109,7 @@ console.log(text);
 
 
 for (i = 0; i <= 20; i++) {
-  if ( i % 2 == 0) {
+  if ( c) {
     console.log(`${i} is even`);
 } else {
     console.log(`${i} is odd`);
@@ -185,4 +185,73 @@ for (let i = 1; i <= 3; i++) {
   }
 }
 console.log(text);
+
+for (let i = 0; i <= 5; i++) {
+  if (i % 2 !==0) console.log(i);
+}
+
+
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+} */
+
+/*let evenOrOdd;
+
+for (let i = 0; i <= 20; i++) {
+
+  if (i % 2 == 0)
+    evenOrOdd = "even";
+  else 
+    evenOrOdd = "odd";
+  
+  console.log(i + " is " + evenOrOdd);
+} 
+
+function dogYearsCount (dogYears) {
+
+  let humanYears, result;
+  humanYears = dogYears * 7; 
+
+  return result = dogYears + " in dog years is " + humanYears + " in human years";
+
+}
+
+console.log(dogYearsCount(6));
+
+
+//  0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+
+/* text = "";
+for (let i = 1; i <= 3; i++ ) {
+  for (let j = 0; j <= 4; j++) {
+    text += j + " ";
+  }
+}
+console.log(text);
+
+
+*/
+
+// 100 200 300 400 500 600 700 800 900 1000
+/* text = "";
+
+for (let i = 100; i <= 1000; i+=100) {
+  text += i + " ";
+}
+
+console.log(text); */
+
+function footballPoints (wins, draws, losses) {
+  
+  let win = 3 * wins;
+  let draw = 1 * draws;
+  let loss = 0 * losses;
+
+  let points = draw + win + loss;
+  return points;
+
+}
+
+console.log(footballPoints (5, 8, 5));
 

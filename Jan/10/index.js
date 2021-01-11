@@ -14,7 +14,8 @@ num <= 5 ? console.log("1000") : console.log("2000");
 
 console.log(num + num);
 
-//let x = 10;
+//let x = 10;ls
+
 
 let y = 4;
 
@@ -46,3 +47,16 @@ console.log(floatNumFlourCeil(326.76));
 console.log(floatNumFlourCeil(76788.7));
 console.log(floatNumFlourCeil(-9.78));
 console.log(floatNumFlourCeil(43.342)); */
+
+let str = function outer() {
+
+  var fish = "🐟";
+  var count = 1;
+  let outcome = fish + count;
+  return outcome;
+  function inner(outcome) {
+    count++;
+    return count++;
+  }
+}
+console.log(outcome);
