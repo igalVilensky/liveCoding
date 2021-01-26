@@ -1,8 +1,8 @@
-const array = ["hi", "bye", "hello"];
+/* const array = ["hi", "bye", "hello"];
 const copyArray = [true, ...array, "wow"];
 copyArray[6] = "new";
 console.log(array);
-console.log(copyArray);
+console.log(copyArray); */
 
 /* Write a function that it returns  “Two for me and one for you” when no arguments are passed
 e.g
@@ -25,7 +25,9 @@ e.g
 console.log(exponent(3, 3)) ---> 27
 console.log(exponent(3)) ---> 9 */
 
-//const exponent = (x * y) => {};
+const exponent = (x, y = 2) => x ** y;
+console.log("-----------");
+console.log(exponent(3, 3));
 
 /* Write a function that it returns the total amount of arguments passed to it.
 e.g
@@ -37,6 +39,7 @@ function howManyArgs(...arg) {
   console.log(arguments.length);
 }
 
+console.log("-----------");
 console.log(howManyArgs());
 console.log(howManyArgs(1, false, "hello"));
 console.log(howManyArgs("better"));
@@ -55,6 +58,7 @@ function sum() {
   return sum;
 }
 
+console.log("-----------");
 console.log(sum(1));
 console.log(sum(1, 15));
 console.log(sum(25, 25, 20));
@@ -76,11 +80,10 @@ const average = (...nums) => {
   for (let i = 0; i < nums.length; i++) {
     result += nums[i] / nums.length;
   }
-
+  console.log("-----------");
   console.log(result);
 };
 
-console.log(average(2, 4, 5, 67, 7, 8, 3));
 console.log(average(0));
 console.log(average(1, 2));
 console.log(average(1, 3, 6, 10));
