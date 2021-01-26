@@ -115,6 +115,56 @@ Examples:
 hackerSpeak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
 hackerSpeak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
 hackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r" */
+const hackerSpeak2 = (int) => {
+  return int
+    .toString()
+    .split("")
+    .map((int) => {
+      switch (int) {
+        case "1":
+          return "4";
+        case "2":
+          return "5";
+        case "3":
+          return "6";
+        case "o4":
+          return "7";
+        case "5":
+          return "1";
+        default:
+          return int;
+      }
+    })
+    .reverse()
+    .join(" ");
+};
+
+console.log(hackerSpeak2(123456789));
+
+const hackerSpeak1 = (str) => {
+  return str
+    .toLowerCase()
+    .split("")
+    .map((chr) => {
+      switch (chr) {
+        case "a":
+          return "4";
+        case "e":
+          return "3";
+        case "i":
+          return "1";
+        case "o":
+          return "0";
+        case "s":
+          return "5";
+        default:
+          return chr;
+      }
+    })
+    .join("");
+};
+
+console.log(hackerSpeak1("javascript is cool"));
 
 const hackerSpeak = (str) => {
   return str
@@ -145,8 +195,78 @@ console.log(hackerSpeak("javascript is cool"));
 // Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
 // [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 
+const oddOrEven1 = (...args) => {
+  return args.map((item) => (item % 2 == 0 ? item + 5 : item * 100));
+};
+
+const oddOrEven2 = (...args) => {
+  let argToTest = args.toString().split(",");
+  for (let i = 0; i < args.length; i++) {
+    if (argToTest[i] % 2 == 0) --argToTest[i];
+  }
+  /*   for (let j = 0; j < args.length; j++)
+    if (argToTest[j] % 2 !== 0) {
+      argToTest[j]++;
+    } */
+
+  return argToTest.join(",");
+};
+
+console.log(oddOrEven2(1, 2, 3, 5, 7, 8));
+
 const oddOrEven = (...args) => {
-  return args.map((item) => (item % 2 == 0 ? item++ : item--));
+  return args.map((item) => (item % 2 == 0 ? ++item : --item));
 };
 
 console.log(oddOrEven(2, 4, 7));
+
+/* how many chr in a str(not case sens) */
+
+const chrCount = (str) => {
+  return str.length * 100;
+};
+console.log(chrCount("This is a test string"));
+
+const salaryInYear = (int) => {
+  return int * 12;
+};
+
+console.log(salaryInYear(1300));
+
+const moneyConverter = (int) => int * 3.3;
+
+console.log(moneyConverter(1300));
+
+/* howManyStr(“I like pizza”,“p”) -> 1 */
+
+const howMany = (str, chr) => {
+  let counter = 0;
+  let lower = str.toLowerCase();
+  for (let i = 0; i < lower.length; i++) {
+    if (lower[i] == chr) {
+      counter++;
+    }
+  }
+  return counter;
+};
+
+console.log(howMany("I like pizza", "i"));
+
+const howManyStr = (str, chr) => {
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((letter) => letter == chr).length;
+};
+
+console.log(howManyStr("I like pizza", "p"));
+
+const howManyStr1 = (str, chr) => {
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((letter) => letter == chr).length;
+};
+
+console.log(howManyStr1("I like pizza", "i"));
+console.log(howManyStr1("I like pizza", "p"));
