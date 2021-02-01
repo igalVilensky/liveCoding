@@ -19,3 +19,82 @@ Output: $30000 */
     console.log(percCount);
   }
 })(30, 65, 1500, 10);
+
+// Seasons
+// Create a function that accepts a text from user and check if the user has entered a month name, if so print out that month and in which season it is.
+// I will be nice again to you and offer the arrays 😉
+// const months = [ "december", "january", "february", "march", "april", "may", "jun", "july", "august", "september", "october", "november" ];
+// const seasons = ["Winter", "Spring", "Summer", "Autumn"];
+// Examples :
+// monthCheck("I love Jun"); -> Jun is in Summer
+// monthCheck("We need Kartoffel"); -> We couldn’t find any month in your text, sorry try again
+
+/* const monthCheck = (str) => {
+  let months = [
+    "december",
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+  ];
+  let seasons = ["Winter", "Spring", "Summer", "Autumn"];
+  const currentSe = seasons.find(
+    (months) => months == "december",
+    "january",
+    "february"
+  );
+  let month = str
+    .toLowerCase()
+    .split(" ")
+    .filter((word) => months.includes(word))
+    .join("");
+  return month == ""
+    ? `We couldn’t find any month in your text, sorry try again`
+    : `You have entered ${month}, which is in ${currentSe}`;
+};
+console.log(monthCheck("I love december"));
+console.log(monthCheck("We need Kartoffel"));
+
+console.log("____________________");
+ */
+const monthCheck = (str) => {
+  let months = [
+    "december",
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+  ];
+  let seasons = ["Winter", "Spring", "Summer", "Autumn"];
+
+  let month = str
+    .toLowerCase()
+    .split(" ")
+    .filter((word) => months.includes(word))
+    .join("");
+
+  const currentSe = (monthName) => {
+    return seasons[Math.floor(months.indexOf(monthName)) / 3];
+  };
+  return month == ""
+    ? `We couldn’t find any month in your text, sorry try again`
+    : `You have entered ${month}, which is in ${currentSe(month)} `;
+};
+console.log(monthCheck("I love June"));
+console.log(monthCheck("We need Kartoffel"));
+
+console.log("____________________");
