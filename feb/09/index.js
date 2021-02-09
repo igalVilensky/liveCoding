@@ -36,3 +36,16 @@ const mergeObj = (obj1, obj2) => {
 };
 
 console.log(mergeObj(first, last));
+
+// loop
+
+let loopTil1 = () => {
+  let result = "";
+  for (let i = 1; i <= 256; i *= 2) {
+    result += `${i} `;
+  }
+
+  return result;
+};
+
+console.log(loopTil1());
