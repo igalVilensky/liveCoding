@@ -27,3 +27,12 @@ let first = {firstName: "John"}
 let last = {lastName: "Smith"}
 Expected output:
 {firstName: "John", lastName: "Smith"} */
+
+let first = { firstName: "John" };
+let last = { lastName: "Smith" };
+
+const mergeObj = (obj1, obj2) => {
+  return Object.assign(first, last);
+};
+
+console.log(mergeObj(first, last));
