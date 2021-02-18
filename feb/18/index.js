@@ -22,11 +22,6 @@ console.log(filterArray([1, 2, "aasf", "1", "123", 123, "123"])); */
 
 // Create a function which returns the number of true values there are in an array.
 
-// Examples
-// countTrue([true, false, false, true, false]) ➞ 2
-
-// countTrue([false, false, false, false]) ➞ 0
-
 // countTrue([]) ➞ 0
 // Notes
 // Return 0 if given an empty array.
@@ -61,12 +56,6 @@ console.log(test);
 
 // Given you and your friend's tile number, create a function that returns if it's possible to earn a bonus when you roll the dice.
 
-// Examples
-// possibleBonus(3, 7) ➞ true
-
-// possibleBonus(1, 9) ➞ false
-
-// possibleBonus(5, 3) ➞ false
 // Notes
 // You cannot move backward (which is why example #3 doesn't work).
 // If you are already on the same tile, return false, as you would be advancing away.
@@ -92,13 +81,6 @@ console.log(possibleBonus(1, 9));
 console.log(possibleBonus(5, 3));
 
 // Create a function that takes a country's name and its area as arguments and returns the area of the country's proportion of the total world's landmass.
-
-// Examples
-// areaOfCountry("Russia", 17098242) ➞ "Russia is 11.48% of the total world's landmass"
-
-// areaOfCountry("USA", 9372610), "USA is 6.29% of the total world's landmass"
-
-// areaOfCountry("Iran", 1648195) ➞ "Iran is 1.11% of the total world's landmass"
 // Notes
 // The total world's landmass is 148,940,000 [Km^2]
 // Round the result to two decimal places.
