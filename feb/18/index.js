@@ -159,3 +159,80 @@ for (i in some) {
 }
 
 console.log(obj9);
+
+// Given three arguments ⁠— an object obj of the stolen items, the pets name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+// Examples
+// addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+// addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+// addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+// Notes
+// The value argument will be a number.
+
+console.log("*************************");
+
+const addName3 = (obj, name, value) => {
+  let objMain = { obj, name, value };
+  let result;
+  if (Object.entries(objMain.obj).length === 0) {
+    return (obj = "");
+  }
+
+  console.log(objMain.obj.length);
+  return objMain;
+};
+
+console.log(addName3({}, "Brutus", 300));
+/* console.log(addName3({ piano: 500 }, "Brutus", 400));
+console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440)); */
+
+// Write a function that returns 0 if the input is 1, and returns 1 if the input is 0.
+
+// Examples
+// flip(1) ➞ 0
+
+// flip(0) ➞ 1
+// Notes
+// Try completing this challenge without using any:
+
+// Conditionals
+// Ternary operators
+// Negations
+// Bit operators
+
+const flip = (n) => {
+  let result;
+  if (n === 0) {
+    result = 1;
+  } else {
+    result = 0;
+  }
+
+  return result;
+};
+
+console.log(flip(0));
+console.log(flip(1));
+
+// Create a function that will take a HEX number and returns the binary equivalent (as a string).
+
+// Examples
+// toBinary(0xFF) ➞ "11111111"
+
+// toBinary(0xAA) ➞ "10101010"
+
+// toBinary(0xFA) ➞ "11111010"
+// Notes
+// The number will be always an 8-bit number.
+
+const toBinary = (str) => {
+  let result = (str >>> 0).toString(2);
+
+  return result;
+};
+
+console.log(toBinary(0xff));
+console.log(toBinary(0xaa));
+console.log(toBinary(0xfa));
