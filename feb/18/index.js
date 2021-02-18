@@ -101,3 +101,61 @@ console.log(areaOfCountry("USA", 9372610));
 console.log(areaOfCountry("Iran", 1648195));
 console.log(areaOfCountry("Israel", 22145));
 console.log(areaOfCountry("Kazakhstan", 2724900));
+
+// Given three arguments ⁠— an object obj of the stolen items, the pets name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+// Examples
+// addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+// addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+// addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+// Notes
+// The value argument will be a number.
+
+const addName = (obj, name, value) => {
+  //   let newObj;
+  //   let some = Object.values(obj);
+  //   if (obj == "") {
+  //     newObj = { name, value };
+  //   } else {
+  //     let objEnt = Object.entries(obj);
+  //     newObj = { objEnt, name, value };
+  //   }
+  //   return some;
+};
+
+console.log(addName({}, "Brutus", 300));
+console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440));
+
+const obj10 = {
+  name: "igal",
+  age: 35,
+  married: true,
+};
+
+let val = Object.values(obj10);
+
+let keys = Object.keys(obj10);
+
+let entr = Object.entries(obj10);
+
+console.log(val);
+console.log(keys);
+console.log(entr);
+
+let newObj = Object.keys(obj10) + " " + Object.values(obj10);
+
+let some = newObj.split(" ");
+
+console.log(some);
+
+let obj9 = {};
+
+var i;
+for (i in some) {
+  some[i] = some[i].split(":");
+  obj9[some[i]] = some[i];
+}
+
+console.log(obj9);
