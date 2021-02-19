@@ -236,3 +236,106 @@ const toBinary = (str) => {
 console.log(toBinary(0xff));
 console.log(toBinary(0xaa));
 console.log(toBinary(0xfa));
+
+// Check if a string title is a title string or not. A title string is one which has all the words in the string start with a upper case letter.
+
+// Examples
+// checkTitle("A Mind Boggling Achievement") ➞ true
+
+// checkTitle("A Simple Java Script Program!") ➞ true
+
+// checkTitle("Water is transparent") ➞ false
+
+const checkTitle = (str) => {
+  let bigLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let blToArr = bigLet.split("");
+  let result;
+  let counter = 0;
+  let strToArr = str.split(" ");
+  for (let i = 0; i < strToArr.length; i++) {
+    for (let j = 0; j < blToArr.length; j++) {
+      if (strToArr[i][0] == blToArr[j]) {
+        counter++;
+        /*   console.log(counter);
+        console.log(strToArr.length); */
+        if (counter == strToArr.length) {
+          result = true;
+        } else {
+          result = false;
+        }
+        /*    console.log(blToArr[j]); */
+      }
+    }
+  }
+
+  return result;
+};
+
+console.log(checkTitle("A Mind Boggling Achievement"));
+console.log(checkTitle("A Simple Java Script Program!"));
+console.log(checkTitle("Water is transparent"));
+
+// Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+
+// Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
+// Notes
+// Zero is a non-negative integer.
+// The given array only has integers and strings.
+// Numbers in the array should not repeat.
+// The original order must be maintained.
+
+const filterArray = (arr) => {
+  let finArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Number.isInteger(arr[i])) {
+      finArr.unshift(arr[i]);
+    }
+  }
+  return finArr.reverse();
+};
+
+console.log("***********");
+console.log(filterArray([1, 2, "a", "b"]));
+console.log(filterArray([1, "a", "b", 0, 15]));
+console.log(filterArray([1, 2, "aasf", "1", "123", 123]));
+
+let num = 10;
+
+let num2 = 20;
+
+console.log(10 >> 20);
+
+/* 
+Create a function that finds the highest integer in the array using recursion.
+
+Examples
+findHighest([-1, 3, 5, 6, 99, 12, 2]) ➞ 99
+
+findHighest([0, 12, 4, 87]) ➞ 87
+
+findHighest([6,7,8]) ➞ 8
+ */
+
+const findHighest = (arr) => {
+  let copyArr = arr.slice();
+
+  if (copyArr.length == 1) {
+    console.log(copyArr[0]);
+    return copyArr[0];
+  }
+
+  if (copyArr[0] < copyArr[1]) {
+    return copyArr.splice(0, 1);
+  } else {
+    copyArr.splice(1, 1);
+  }
+
+  return findHighest(copyArr);
+};
+
+console.log(findHighest([-1, 3, 5, 6, 99, 12, 2]));
