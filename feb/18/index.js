@@ -339,3 +339,16 @@ const findHighest = (arr) => {
 };
 
 console.log(findHighest([-1, 3, 5, 6, 99, 12, 2]));
+
+function nearHundred(n) {
+  if (Math.abs(n) >= 90 && Math.abs(n) <= 110) {
+    return true;
+  } else if (Math.abs(n) >= 190 && Math.abs(n) <= 210) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(nearHundred(89));
+console.log(nearHundred(93));
