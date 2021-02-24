@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
+
+h1 {
+  font-family: "Open Sans";
+}
+
+body {
+  background-color: aqua;
+}
+.cool {
+  background-color: azure;
+  width: 3rem;
+  height: 3rem;
+  border: black 2px solid;
+  border-radius: 1rem;
+}
+.square {
+  background-color: azure;
+  width: 3rem;
+  height: 3rem;
+  border: black 2px solid;
+  border-radius: 0, 1rem;
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
+.reactangle {
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: burlywood;
+  border-radius: 1rem;
+}
+
+input:hover {
+  background-color: crimson;
+}
