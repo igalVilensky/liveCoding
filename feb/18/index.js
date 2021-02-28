@@ -352,3 +352,90 @@ function nearHundred(n) {
 
 console.log(nearHundred(89));
 console.log(nearHundred(93));
+function posNeg(a, b, negative) {
+  let result;
+  if (Math.sign(a) !== Math.sign(b) && negative === false) {
+    result = true;
+  } else if (Math.sign(a) === Math.sign(b) && negative === true) {
+    result = true;
+  } else if (Math.sign(a) > 0 && Math.sign(b) > 0 && negative === true) {
+    result = false;
+  } else {
+    result = false;
+  }
+
+  return result;
+}
+
+function posNeg(a, b, negative) {
+  let result;
+  if (Math.sign(a) !== Math.sign(b) && negative === false) {
+    result = true;
+  } else if (a > 0 && b > 0 && negative === true) {
+    result = false;
+  } else if (a < 0 && b < 0 && negative === true) {
+    result = true;
+  } else {
+    result = false;
+  }
+
+  return result;
+}
+
+console.log("************************************");
+console.log(posNeg(1, 1, true));
+console.log(posNeg(1, -1, false));
+console.log(posNeg(-1, -1, true));
+
+// Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
+
+// Examples
+
+// notString('candy') → not candy
+// notString('x') → not x
+// notString('not bad') → not bad
+
+const notString = (str) => {
+  let result = "";
+  let strToArr = str.split(" ");
+
+  for (let i = 0; i < strToArr.length; i++) {
+    if (strToArr[0] == "not") {
+      result = `${str}`;
+    } else if (!str.includes("not")) {
+      result = `not ${str}`;
+    } else {
+      result = `not ${str}`;
+    }
+  }
+
+  return result;
+};
+
+console.log(notString("candy"));
+console.log(notString("x"));
+console.log(notString("not bad"));
+console.log(notString("not"));
+console.log(notString("is not"));
+
+// Given a non-empty string and an int n, return a new string where the char at index n has been removed.
+
+// The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
+
+// Examples
+
+// missingChar('kitten', 1) → ktten
+// missingChar('kitten', 0) → itten
+// missingChar('kitten', 4) → kittn
+
+const missingChar = (str, n) => {
+  let strToArr = str.split("");
+
+  let result = strToArr.filter((chr) => chr !== str.charAt(n));
+
+  return result.join("");
+};
+
+console.log(missingChar("kitten", 1));
+console.log(missingChar("kitten", 0));
+console.log(missingChar("kitten", 4));
